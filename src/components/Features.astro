@@ -1,0 +1,165 @@
+---
+const features = [
+  {
+    badge: "Performance",
+    title: "Des Temps de Chargement Éclair",
+    description: "Notre technologie de pointe garantit une expérience utilisateur fluide et réactive. Profitez d'une interface ultra-rapide qui s'adapte instantanément à vos besoins.",
+    benefits: [
+      "Optimisation automatique des ressources",
+      "Cache intelligent pour des performances maximales",
+      "Infrastructure scalable et fiable"
+    ],
+    stat: { value: "3x", label: "Plus Rapide" }
+  },
+  {
+    badge: "Sécurité",
+    title: "Vos Données Sont Notre Priorité",
+    description: "Sécurité de niveau bancaire avec chiffrement end-to-end. Vos informations sont protégées par les technologies les plus avancées du marché.",
+    benefits: [
+      "Chiffrement AES-256 de toutes les données",
+      "Authentification à deux facteurs",
+      "Sauvegardes automatiques quotidiennes"
+    ],
+    stat: { value: "100%", label: "Sécurisé" }
+  },
+];
+---
+
+<section id="features" class="pb-16 overflow-hidden">
+  {features.map((feature, index) => (
+    <div class={`${index === 0 ? 'pt-24 pb-16' : 'py-16'} ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
+      <div class="container mx-auto px-6">
+        <div class={`grid lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+          
+          <!-- Contenu texte -->
+          <div class={`space-y-6 animate-on-scroll ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+            <div class="inline-block px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold">
+              {feature.badge}
+            </div>
+            
+            <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+              {feature.title}
+            </h2>
+            
+            <p class="text-xl text-gray-600 leading-relaxed">
+              {feature.description}
+            </p>
+
+            <ul class="space-y-4">
+              {feature.benefits.map((benefit) => (
+                <li class="flex items-start gap-3">
+                  <span class="shrink-0 w-6 h-6 bg-linear-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white text-sm mt-1">✓</span>
+                  <span class="text-gray-700 text-lg">{benefit}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="pt-4">
+              <div class="inline-flex items-baseline gap-2">
+                <span class="text-5xl font-bold text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-pink-600">
+                  {feature.stat.value}
+                </span>
+                <span class="text-xl text-gray-600 font-semibold">
+                  {feature.stat.label}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visuel animé -->
+          <div class={`relative h-[500px] animate-on-scroll ${index % 2 === 1 ? 'lg:order-1' : ''}`} style={`animation-delay: 0.2s;`}>
+            <!-- Fond décoratif -->
+            <div class={`absolute inset-0 bg-linear-to-br ${
+              index === 0 ? 'from-purple-100 via-pink-50 to-purple-50' : 
+              index === 1 ? 'from-blue-100 via-purple-50 to-pink-50' : 
+              'from-pink-100 via-purple-50 to-blue-50'
+            } rounded-3xl transform rotate-3`}></div>
+            
+            <!-- Carte principale -->
+            <div class="absolute inset-8 bg-white rounded-2xl shadow-2xl p-8 transform -rotate-1 hover:rotate-0 transition-transform duration-500">
+              <div class="h-full flex flex-col">
+                <!-- Header de la carte -->
+                <div class="flex items-center gap-4 mb-6">
+                  <div class={`w-16 h-16 rounded-2xl bg-linear-to-br ${
+                    index === 0 ? 'from-purple-500 to-pink-500' : 
+                    index === 1 ? 'from-blue-500 to-purple-500' : 
+                    'from-pink-500 to-purple-500'
+                  } flex items-center justify-center text-3xl`}>
+                    {index === 0 ? '⚡' : index === 1 ? '🔒' : '🔄'}
+                  </div>
+                  <div class="flex-1">
+                    <div class="h-3 bg-gray-200 rounded w-32 mb-2"></div>
+                    <div class="h-2 bg-gray-100 rounded w-24"></div>
+                  </div>
+                </div>
+
+                <!-- Contenu de la carte -->
+                <div class="flex-1 space-y-4">
+                  <div class="space-y-2">
+                    <div class="h-4 bg-gray-100 rounded w-full"></div>
+                    <div class="h-4 bg-gray-100 rounded w-5/6"></div>
+                    <div class="h-4 bg-gray-100 rounded w-4/6"></div>
+                  </div>
+
+                  <div class="grid grid-cols-2 gap-4 pt-4">
+                    <div class={`h-24 rounded-xl bg-linear-to-br ${
+                      index === 0 ? 'from-purple-100 to-pink-100' : 
+                      index === 1 ? 'from-blue-100 to-purple-100' : 
+                      'from-pink-100 to-purple-100'
+                    } p-4 flex items-center justify-center`}>
+                      <div class="text-center">
+                        <div class="text-2xl font-bold text-gray-800">
+                          {index === 0 ? '99.9%' : index === 1 ? '256-bit' : 'Real-time'}
+                        </div>
+                        <div class="text-xs text-gray-600">
+                          {index === 0 ? 'Uptime' : index === 1 ? 'Encryption' : 'Sync'}
+                        </div>
+                      </div>
+                    </div>
+                    <div class={`h-24 rounded-xl bg-linear-to-br ${
+                      index === 0 ? 'from-pink-100 to-purple-100' : 
+                      index === 1 ? 'from-purple-100 to-pink-100' : 
+                      'from-purple-100 to-blue-100'
+                    } p-4 flex items-center justify-center`}>
+                      <div class="text-center">
+                        <div class="text-2xl font-bold text-gray-800">
+                          {index === 0 ? '<1s' : index === 1 ? 'ISO' : '∞'}
+                        </div>
+                        <div class="text-xs text-gray-600">
+                          {index === 0 ? 'Load Time' : index === 1 ? 'Certified' : 'Users'}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Footer de la carte -->
+                <div class={`mt-6 h-12 rounded-xl bg-linear-to-r ${
+                  index === 0 ? 'from-purple-500 to-pink-500' : 
+                  index === 1 ? 'from-blue-500 to-purple-500' : 
+                  'from-pink-500 to-purple-500'
+                } flex items-center justify-center text-white font-semibold shadow-lg`}>
+                  {index === 0 ? 'Démarrer Maintenant' : index === 1 ? 'En Savoir Plus' : 'Essayer Gratuitement'}
+                </div>
+              </div>
+            </div>
+
+            <!-- Élément décoratif flottant -->
+            <div class={`absolute -top-6 -right-6 w-32 h-32 bg-linear-to-br ${
+              index === 0 ? 'from-purple-400 to-pink-400' : 
+              index === 1 ? 'from-blue-400 to-purple-400' : 
+              'from-pink-400 to-purple-400'
+            } rounded-full opacity-20 blur-2xl animate-float`}></div>
+            
+            <div class={`absolute -bottom-6 -left-6 w-40 h-40 bg-linear-to-br ${
+              index === 0 ? 'from-pink-400 to-purple-400' : 
+              index === 1 ? 'from-purple-400 to-pink-400' : 
+              'from-purple-400 to-blue-400'
+            } rounded-full opacity-20 blur-2xl animate-float`} style="animation-delay: 1s;"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  ))}
+</section>

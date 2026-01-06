@@ -1,0 +1,220 @@
+---
+---
+
+<section class="relative min-h-screen flex items-center overflow-hidden bg-linear-to-br from-indigo-600 via-purple-600 to-pink-500">
+  <!-- Effet de fond animé -->
+  <div class="absolute inset-0 opacity-30">
+    <div class="absolute top-20 left-20 w-72 h-72 bg-white rounded-full mix-blend-overlay filter blur-xl animate-float"></div>
+    <div class="absolute top-40 right-20 w-96 h-96 bg-purple-300 rounded-full mix-blend-overlay filter blur-xl animate-float" style="animation-delay: 1s;"></div>
+    <div class="absolute -bottom-32 left-1/2 w-96 h-96 bg-pink-300 rounded-full mix-blend-overlay filter blur-xl animate-float" style="animation-delay: 2s;"></div>
+  </div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Contenu texte -->
+      <div class="text-white space-y-8 animate-on-scroll">
+        <div class="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium">
+          🚀 Nouveau : Version 2.0 disponible
+        </div>
+        
+        <h1 class="text-5xl lg:text-7xl font-bold leading-tight">
+          Transformez Votre
+          <span class="block text-transparent bg-clip-text bg-linear-to-r from-yellow-200 to-pink-200">
+            Business
+          </span>
+          En Quelques Clics
+        </h1>
+        
+        <p class="text-xl text-purple-100 leading-relaxed">
+          La solution tout-en-un qui simplifie votre quotidien et booste votre productivité. 
+          Rejoignez plus de 10 000 utilisateurs satisfaits.
+        </p>
+        
+        <ul class="space-y-3">
+          <li class="flex items-center gap-3">
+            <span class="shrink-0 w-6 h-6 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">✓</span>
+            <span class="text-purple-100">Installation en moins de 5 minutes</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="shrink-0 w-6 h-6 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">✓</span>
+            <span class="text-purple-100">Support 24/7 en français</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="shrink-0 w-6 h-6 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">✓</span>
+            <span class="text-purple-100">Garantie satisfait ou remboursé</span>
+          </li>
+        </ul>
+        
+        <!-- Stats -->
+        <div class="flex flex-wrap gap-8 pt-4">
+          <div>
+            <div class="text-4xl font-bold">10K+</div>
+            <div class="text-purple-200">Utilisateurs</div>
+          </div>
+          <div>
+            <div class="text-4xl font-bold">98%</div>
+            <div class="text-purple-200">Satisfaction</div>
+          </div>
+          <div>
+            <div class="text-4xl font-bold">24/7</div>
+            <div class="text-purple-200">Support</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulaire de contact -->
+      <div class="animate-on-scroll" style="animation-delay: 0.2s;">
+        <div class="bg-white/95 backdrop-blur-lg rounded-3xl shadow-2xl p-8 lg:p-10">
+          <div class="mb-6">
+            <h2 class="text-3xl font-bold text-gray-900 mb-2">
+              Démarrez Gratuitement
+            </h2>
+            <p class="text-gray-600">
+              Essai gratuit de 14 jours. Sans carte bancaire.
+            </p>
+          </div>
+
+          <form id="contact-form" class="space-y-5">
+            <!-- Nom complet -->
+            <div>
+              <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">
+                Nom complet *
+              </label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                required
+                class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-purple-500 focus:ring-4 focus:ring-purple-100 transition-all outline-none"
+                placeholder="Jean Dupont"
+              >
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
+                Email professionnel *
+              </label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required
+                class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-purple-500 focus:ring-4 focus:ring-purple-100 transition-all outline-none"
+                placeholder="jean@entreprise.fr"
+              >
+            </div>
+
+            <!-- Téléphone -->
+            <div>
+              <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">
+                Téléphone
+              </label>
+              <input 
+                type="tel" 
+                id="phone" 
+                name="phone"
+                class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-purple-500 focus:ring-4 focus:ring-purple-100 transition-all outline-none"
+                placeholder="+33 6 12 34 56 78"
+              >
+            </div>
+
+            <!-- Message -->
+            <div>
+              <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">
+                Votre message
+              </label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="3"
+                class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-purple-500 focus:ring-4 focus:ring-purple-100 transition-all outline-none resize-none"
+                placeholder="Parlez-nous de votre projet..."
+              ></textarea>
+            </div>
+
+            <!-- Bouton submit -->
+            <button 
+              type="submit"
+              class="w-full py-4 bg-linear-to-r from-purple-600 to-pink-600 text-white font-bold rounded-xl hover:shadow-2xl transform hover:scale-[1.02] active:scale-[0.98] transition-all"
+            >
+              Obtenir Mon Accès Gratuit →
+            </button>
+
+            <!-- Message de confirmation -->
+            <div id="form-message" class="hidden p-4 rounded-xl text-center font-semibold"></div>
+          </form>
+
+          <!-- Trust badges -->
+          <div class="mt-6 pt-6 border-t border-gray-200">
+            <div class="flex items-center justify-center gap-4 text-sm text-gray-500">
+              <span class="flex items-center gap-1">
+                <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Données sécurisées
+              </span>
+              <span class="flex items-center gap-1">
+                <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Sans engagement
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    const messageDiv = document.getElementById('form-message') as HTMLDivElement;
+
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(form);
+      const data = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        phone: formData.get('phone') || 'Non renseigné',
+        message: formData.get('message') || 'Demande de démo'
+      };
+
+      // Désactiver le bouton pendant l'envoi
+      const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+      const originalText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Envoi en cours...';
+
+      try {
+        // Simulation d'envoi (remplace par Web3Forms ou ton API)
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        
+        // Succès
+        messageDiv.className = 'p-4 rounded-xl text-center font-semibold bg-green-100 text-green-800';
+        messageDiv.textContent = '✓ Merci ! Nous vous recontacterons sous 24h.';
+        messageDiv.classList.remove('hidden');
+        
+        form.reset();
+        
+        // Masquer le message après 5 secondes
+        setTimeout(() => {
+          messageDiv.classList.add('hidden');
+        }, 5000);
+        
+      } catch (error) {
+        // Erreur
+        messageDiv.className = 'p-4 rounded-xl text-center font-semibold bg-red-100 text-red-800';
+        messageDiv.textContent = '✗ Une erreur est survenue. Réessayez.';
+        messageDiv.classList.remove('hidden');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
+    });
+  });
+</script>

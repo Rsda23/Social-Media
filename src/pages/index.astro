@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import Benefits from '../components/Benefits.astro';
+import Testimonials from '../components/Testimonials.astro';
+import CTA from '../components/CTA.astro';
+import FAQ from '../components/FAQ.astro';
+
+const seoData = {
+  title: "Votre Produit Révolutionnaire | Transformez Votre Business",
+  description: "Découvrez comment notre solution innovante peut transformer votre façon de travailler. Rejoignez plus de 10 000 clients satisfaits.",
+  keywords: "solution, innovation, productivité, business",
+};
+---
+
+<Layout {...seoData}>
+  <Hero />
+  <Features />
+  <Benefits />
+  <Testimonials />
+  <FAQ />
+  <CTA />
+</Layout>
