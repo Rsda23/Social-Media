@@ -1,4 +1,5 @@
 ---
+import benefits from '../data/benefits.json';
 ---
 
 <section class="pb-24 bg-white">
@@ -6,47 +7,29 @@
     <div class="grid lg:grid-cols-2 gap-16 items-center">
       <div class="space-y-8 animate-on-scroll">
         <h2 class="text-4xl lg:text-5xl font-bold text-gray-900">
-          Augmentez Votre Productivité de <span class="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-pink-600">300%</span>
+          {benefits.title} <span class="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-pink-600">{benefits.titleHighlight}</span>
         </h2>
         
         <p class="text-xl text-gray-600 leading-relaxed">
-          Notre solution a été conçue pour vous faire gagner du temps et améliorer votre efficacité au quotidien.
+          {benefits.description}
         </p>
 
         <div class="space-y-6">
-          <div class="flex gap-4 items-start group">
-            <div class="shrink-0 w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center group-hover:bg-purple-600 transition-colors">
-              <span class="text-2xl group-hover:scale-110 transition-transform">✓</span>
+          {benefits.items.map((item) => (
+            <div class="flex gap-4 items-start group">
+              <div class="shrink-0 w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center group-hover:bg-purple-600 transition-colors">
+                <span class="text-2xl group-hover:scale-110 transition-transform">✓</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
+                <p class="text-gray-600">{item.description}</p>
+              </div>
             </div>
-            <div>
-              <h3 class="text-xl font-bold text-gray-900 mb-2">Automatisation Intelligente</h3>
-              <p class="text-gray-600">Laissez l'IA gérer les tâches répétitives pendant que vous vous concentrez sur l'essentiel.</p>
-            </div>
-          </div>
-
-          <div class="flex gap-4 items-start group">
-            <div class="shrink-0 w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center group-hover:bg-purple-600 transition-colors">
-              <span class="text-2xl group-hover:scale-110 transition-transform">✓</span>
-            </div>
-            <div>
-              <h3 class="text-xl font-bold text-gray-900 mb-2">Collaboration Simplifiée</h3>
-              <p class="text-gray-600">Travaillez en équipe avec des outils de collaboration en temps réel.</p>
-            </div>
-          </div>
-
-          <div class="flex gap-4 items-start group">
-            <div class="shrink-0 w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center group-hover:bg-purple-600 transition-colors">
-              <span class="text-2xl group-hover:scale-110 transition-transform">✓</span>
-            </div>
-            <div>
-              <h3 class="text-xl font-bold text-gray-900 mb-2">Intégrations Illimitées</h3>
-              <p class="text-gray-600">Connectez tous vos outils préférés en quelques clics.</p>
-            </div>
-          </div>
+          ))}
         </div>
 
-        <a href="#demo" class="inline-block px-8 py-4 bg-linear-to-r from-purple-600 to-pink-600 text-white rounded-xl font-semibold hover:shadow-2xl transform hover:scale-105 transition-all">
-          Essayer Maintenant
+        <a href={benefits.cta.href} class="inline-block px-8 py-4 bg-linear-to-r from-purple-600 to-pink-600 text-white rounded-xl font-semibold hover:shadow-2xl transform hover:scale-105 transition-all">
+          {benefits.cta.text}
         </a>
       </div>
 

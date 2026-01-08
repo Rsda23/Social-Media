@@ -1,28 +1,5 @@
 ---
-const features = [
-  {
-    badge: "Performance",
-    title: "Des Temps de Chargement Éclair",
-    description: "Notre technologie de pointe garantit une expérience utilisateur fluide et réactive. Profitez d'une interface ultra-rapide qui s'adapte instantanément à vos besoins.",
-    benefits: [
-      "Optimisation automatique des ressources",
-      "Cache intelligent pour des performances maximales",
-      "Infrastructure scalable et fiable"
-    ],
-    stat: { value: "3x", label: "Plus Rapide" }
-  },
-  {
-    badge: "Sécurité",
-    title: "Vos Données Sont Notre Priorité",
-    description: "Sécurité de niveau bancaire avec chiffrement end-to-end. Vos informations sont protégées par les technologies les plus avancées du marché.",
-    benefits: [
-      "Chiffrement AES-256 de toutes les données",
-      "Authentification à deux facteurs",
-      "Sauvegardes automatiques quotidiennes"
-    ],
-    stat: { value: "100%", label: "Sécurisé" }
-  },
-];
+import features from '../data/features.json';
 ---
 
 <section id="features" class="pb-16 overflow-hidden">
@@ -85,7 +62,7 @@ const features = [
                     index === 1 ? 'from-blue-500 to-purple-500' : 
                     'from-pink-500 to-purple-500'
                   } flex items-center justify-center text-3xl`}>
-                    {index === 0 ? '⚡' : index === 1 ? '🔒' : '🔄'}
+                    {feature.icon || (index === 0 ? '⚡' : index === 1 ? '🔒' : '🔄')}
                   </div>
                   <div class="flex-1">
                     <div class="h-3 bg-gray-200 rounded w-32 mb-2"></div>

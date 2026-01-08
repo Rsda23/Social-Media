@@ -1,0 +1,122 @@
+---
+import creativity from '../data/creativity.json';
+import handImage from '../assets/picto-1.png';
+import plusImage from '../assets/plus.png';
+import moinsImage from '../assets/moins.png';
+import picto2 from '../assets/picto-2.png';
+import picto3 from '../assets/picto-3.png';
+
+// Mapping des images
+const imageMap: Record<string, any> = {
+  '../assets/picto-1.png': handImage,
+  '../assets/plus.png': plusImage,
+  '../assets/moins.png': moinsImage,
+  '../assets/picto-2.png': picto2,
+  '../assets/picto-3.png': picto3,
+};
+
+const hand = imageMap[creativity.left.hand] || handImage;
+const plus = imageMap['../assets/plus.png'] || plusImage;
+const moins = imageMap['../assets/moins.png'] || moinsImage;
+const topDecoration = imageMap[creativity.right.decorations.top] || picto2;
+const bottomDecoration = imageMap[creativity.right.decorations.bottom] || picto3;
+---
+
+<section class="py-24 relative overflow-hidden" style="background-color: #EFEFEF;">
+  <!-- Décorations bleues 3D -->
+  <div class="absolute top-0 right-0 w-32 h-32 lg:w-48 lg:h-48 opacity-30">
+    <img 
+      src={topDecoration.src}
+      alt="Décoration"
+      class="w-full h-full object-contain"
+    />
+  </div>
+  <div class="absolute bottom-0 right-0 w-32 h-32 lg:w-48 lg:h-48 opacity-30">
+    <img 
+      src={bottomDecoration.src}
+      alt="Décoration"
+      class="w-full h-full object-contain"
+    />
+  </div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+      <!-- Colonne gauche - Fond noir -->
+      <div class="rounded-2xl p-8 lg:p-12 space-y-8 animate-on-scroll" style="padding-top: 0px; background-color: #030508;">
+        <!-- Main pointant -->
+        <div class="flex justify-center">
+          <img 
+            src={hand.src}
+            alt="Main pointant"
+            class="w-16 h-auto object-contain"
+          />
+        </div>
+
+        <!-- Titres avec mots en bleu -->
+        <div class="space-y-4">
+          {creativity.left.items.map((item) => (
+            <h2 class="text-lg font-bold text-white uppercase leading-tight" style="font-family: 'Climate Crisis', sans-serif;">
+              {item.text} <span style="color: #0084FF;">{item.highlight}</span>.
+            </h2>
+          ))}
+        </div>
+
+        <!-- Icône flèche -->
+        <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="transform: rotate(-4deg); background-color: #0084FF;">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="transform: rotate(-45deg);">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </div>
+
+        <!-- Liste avec plus et moins -->
+        <ul class="space-y-4">
+          {creativity.left.list.map((item) => (
+            <li class="flex items-center gap-3">
+              <img 
+                src={item.type === 'plus' ? plus.src : moins.src}
+                alt={item.type === 'plus' ? 'Plus' : 'Moins'}
+                class="w-6 h-6 object-contain"
+              />
+              <span class="text-white font-bold text-lg uppercase" style="font-family: 'Climate Crisis', sans-serif;">
+                {item.text}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Colonne droite - Fond gris clair -->
+      <div class="space-y-6 animate-on-scroll" style="animation-delay: 0.2s; background-color: #EFEFEF;">
+        <!-- Banner bleu et Titre avec rotation -->
+        <div style="transform: rotate(-2deg) !important; transform-origin: center;">
+          <!-- Banner bleu -->
+          <div class="text-white px-6 py-3 rounded-lg inline-block mb-4" style="background-color: #0084FF;">
+            <span class="font-bold text-lg uppercase tracking-wide" style="font-family: 'Climate Crisis', sans-serif;">
+              {creativity.right.banner}
+            </span>
+          </div>
+
+          <!-- Titre -->
+          <div class="space-y-2">
+            <h2 class="text-3xl lg:text-4xl font-bold uppercase leading-tight" style="font-family: 'Climate Crisis', sans-serif; color: #030508;">
+              {creativity.right.title.line1}
+            </h2>
+            <h2 class="text-3xl lg:text-4xl font-bold uppercase leading-tight" style="font-family: 'Climate Crisis', sans-serif; color: #030508;">
+              {creativity.right.title.line2} <span style="color: #0084FF;">{creativity.right.title.line3}</span>
+            </h2>
+          </div>
+        </div>
+
+        <!-- Paragraphes -->
+        <div class="space-y-4 pt-4">
+          {creativity.right.paragraphs.map((paragraph) => (
+            <p class="text-base lg:text-lg leading-relaxed font-black" style="font-family: 'Montserrat', sans-serif; color: #030508;">
+              {paragraph}
+            </p>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,100 @@
+---
+import program from '../data/program.json';
+import imageTitle from '../assets/image-title.png';
+import imageLeft from '../assets/image-left.png';
+import imageRight from '../assets/image-right.png';
+
+// Mapping des images
+const imageMap: Record<string, any> = {
+  '../assets/image-title.png': imageTitle,
+  '../assets/image-left.png': imageLeft,
+  '../assets/image-right.png': imageRight,
+};
+
+const titleImage = imageMap[program.images.title] || imageTitle;
+const leftImage = imageMap[program.images.left] || imageLeft;
+const rightImage = imageMap[program.images.right] || imageRight;
+---
+
+<section class="py-24 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+      <!-- Colonne gauche -->
+      <div class="space-y-12">
+        <!-- Section haut gauche -->
+        <div class="space-y-4 animate-on-scroll" style="transform: rotate(-4deg) !important; transform-origin: center;">
+          <!-- Image des mains -->
+          <div class="mb-0">
+            <img 
+              src={titleImage.src}
+              alt="Deux mains"
+              class="w-32 h-auto object-contain"
+            />
+          </div>
+          
+          <!-- Banner bleu -->
+          <div class="text-white px-6 py-3 rounded-lg inline-block" style="background-color: #0084FF;">
+            <span class="font-bold text-lg uppercase tracking-wide" style="font-family: 'Climate Crisis', sans-serif;">{program.banner}</span>
+          </div>
+          
+          <!-- Titre avec mots en bleu -->
+          <h2 class="text-3xl lg:text-4xl font-bold leading-tight" style="font-family: 'Climate Crisis', sans-serif; color: #030508;">
+            {program.title.text} <span style="color: #0084FF;">{program.title.highlight1}</span> {program.title.middle} <span style="color: #0084FF;">{program.title.highlight2}</span>.
+          </h2>
+        </div>
+        
+        <!-- Section bas gauche - Image smartphone avec raquette -->
+        <div class="animate-on-scroll" style="animation-delay: 0.2s;">
+          <img 
+            src={leftImage.src}
+            alt="Smartphone avec raquette"
+            class="w-full h-auto object-contain"
+          />
+        </div>
+      </div>
+      
+      <!-- Colonne droite -->
+      <div class="space-y-12">
+        <!-- Section haut droite - Image smartphone avec bière -->
+        <div class="animate-on-scroll" style="animation-delay: 0.1s;">
+          <img 
+            src={rightImage.src}
+            alt="Smartphone avec bière"
+            class="w-full h-auto object-contain"
+          />
+        </div>
+        
+        <!-- Section bas droite - Texte et bouton -->
+        <div class="space-y-6 animate-on-scroll" style="animation-delay: 0.3s;">
+          <!-- Icône flèche -->
+          <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="transform: rotate(-4deg); background-color: #0084FF;">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="transform: rotate(-45deg);">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+          </div>
+          
+          <!-- Texte descriptif -->
+          <div class="space-y-4">
+            <p class="text-lg lg:text-xl leading-relaxed font-black" style="font-family: 'Montserrat', sans-serif; color: #030508;">
+              {program.description.line1}
+            </p>
+            <p class="text-lg lg:text-xl leading-relaxed font-black" style="font-family: 'Montserrat', sans-serif; color: #0084FF;">
+              {program.description.line2}
+            </p>
+          </div>
+          
+          <!-- Bouton -->
+          <a 
+            href={program.button.href}
+            class="inline-block px-8 py-4 text-white font-medium rounded transition-all"
+            style="background-color: #0084FF;"
+            style="font-family: 'Montserrat', sans-serif;"
+          >
+            {program.button.text}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

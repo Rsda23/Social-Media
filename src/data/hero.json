@@ -1,0 +1,32 @@
+{
+  "logo": {
+    "src": "../assets/logo.png",
+    "alt": "Logo"
+  },
+  "title": {
+    "line1": "POUR",
+    "line1Highlight": "VOUS",
+    "line2": "ON NE POSTE",
+    "line3": "PAS. ON DONNE",
+    "line4": "DE LA VOIX!",
+    "line4Highlight": true
+  },
+  "description": "Envie de réseaux sociaux qui sortent du lot? Dans la journée on vous appelle et on vous propose une première vision claire et actionnable.",
+  "buttons": [
+    {
+      "text": "Venez on en parle",
+      "style": "outline",
+      "href": "#contact"
+    },
+    {
+      "text": "Pas de blabla, un devis",
+      "style": "primary",
+      "href": "#devis"
+    }
+  ],
+  "image": {
+    "src": "../assets/header-image.png",
+    "alt": "Main tenant un smartphone"
+  }
+}
+

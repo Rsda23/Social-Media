@@ -1,0 +1,58 @@
+{
+  "left": {
+    "image": "../assets/check.png",
+    "banner": "LA CHECK LIST :",
+    "slogan": {
+      "line1": "VITE FAIT",
+      "line2": "BIEN FAIT.",
+      "line3": "EN VRAI!"
+    }
+  },
+  "middle": {
+    "title": "NOS MÉTIERS",
+    "items": [
+      {
+        "title": "Stratégie Social Media",
+        "description": "Positionnement, lignes éditoriales, calendrier, territoires créatifs."
+      },
+      {
+        "title": "Création de contenus",
+        "description": "Des formats pensés pour capter l'attention dès la première seconde."
+      },
+      {
+        "title": "Community Management",
+        "description": "Une marque vivante, proche et humaine. Même quand ça va vite."
+      },
+      {
+        "title": "Social Ads",
+        "description": "Amplifier les bons contenus, pas brûler du budget."
+      },
+      {
+        "title": "Analyse & optimisation",
+        "description": "On regarde ce qui marche. On ajuste et on améliore."
+      }
+    ]
+  },
+  "right": {
+    "title": "CE QU'ON FAIT",
+    "items": [
+      {
+        "title": "Capter l'attention",
+        "description": "Des contenus pensés pour arrêter le scroll. Pas pour remplir un feed."
+      },
+      {
+        "title": "Vous rendre singulier",
+        "description": "Une marque reconnaissable, quel que soit le format ou la plateforme."
+      },
+      {
+        "title": "Être directs",
+        "description": "Idée + production + diffusion. Sans jamais perdre en qualité."
+      },
+      {
+        "title": "Parler vrai",
+        "description": "On développe ce qui fonctionne. On coupe ce qui ne sert à rien."
+      }
+    ]
+  }
+}
+

@@ -1,0 +1,24 @@
+{
+  "title": "Augmentez Votre Productivité de",
+  "titleHighlight": "300%",
+  "description": "Notre solution a été conçue pour vous faire gagner du temps et améliorer votre efficacité au quotidien.",
+  "items": [
+    {
+      "title": "Automatisation Intelligente",
+      "description": "Laissez l'IA gérer les tâches répétitives pendant que vous vous concentrez sur l'essentiel."
+    },
+    {
+      "title": "Collaboration Simplifiée",
+      "description": "Travaillez en équipe avec des outils de collaboration en temps réel."
+    },
+    {
+      "title": "Intégrations Illimitées",
+      "description": "Connectez tous vos outils préférés en quelques clics."
+    }
+  ],
+  "cta": {
+    "text": "Essayer Maintenant",
+    "href": "#demo"
+  }
+}
+

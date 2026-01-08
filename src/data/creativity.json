@@ -1,0 +1,59 @@
+{
+  "left": {
+    "hand": "../assets/picto-1.png",
+    "items": [
+      {
+        "text": "STRATÉGIE",
+        "highlight": "CLAIRE",
+        "highlightColor": true
+      },
+      {
+        "text": "TERRITOIRE CRÉATIF",
+        "highlight": "FORT",
+        "highlightColor": true
+      },
+      {
+        "text": "CONTENUS QUI",
+        "highlight": "TAPENT",
+        "highlightColor": true
+      }
+    ],
+    "list": [
+      {
+        "type": "minus",
+        "text": "D'ALLERS-RETOURS"
+      },
+      {
+        "type": "minus",
+        "text": "DE DÉLAIS"
+      },
+      {
+        "type": "plus",
+        "text": "DE RÉACTIVITÉ"
+      },
+      {
+        "type": "plus",
+        "text": "DE COHÉRENCE CRÉATIVE"
+      }
+    ]
+  },
+  "right": {
+    "banner": "CE QU'ON EN PENSE :",
+    "title": {
+      "line1": "LA CRÉATIVITÉ.",
+      "line2": "OUI. MAIS AU",
+      "line3": "BON ENDROIT.",
+      "highlight": "BON ENDROIT"
+    },
+    "paragraphs": [
+      "On commence par comprendre votre marque, vos enjeux et vos objectifs, ensuite on imagine des idées qui fonctionnent sur le papier, et surtout à l'écran sans oublier vos KPIs.",
+      "Un plan bien ficelé et ensuite ? Des idées produites vite. Très vite.",
+      "Grâce à notre studio intégré, on crée vos contenus en interne : photos, vidéos, motion, formats viraux, UGC, Social Ads..."
+    ],
+    "decorations": {
+      "top": "../assets/picto-2.png",
+      "bottom": "../assets/picto-3.png"
+    }
+  }
+}
+

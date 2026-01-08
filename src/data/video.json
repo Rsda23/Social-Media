@@ -1,0 +1,12 @@
+{
+  "banner": {
+    "text": "On vous souffle la prochaine !",
+    "backgroundColor": "#3B82F6"
+  },
+  "player": {
+    "thumbnail": "https://placehold.co/1920x1080/000000/FFFFFF?text=Video+Player&font=roboto",
+    "playText": "PLAY",
+    "videoUrl": "#"
+  }
+}
+

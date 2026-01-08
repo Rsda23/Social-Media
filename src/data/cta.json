@@ -1,0 +1,22 @@
+{
+  "title": "Prêt à Transformer Votre Business ?",
+  "description": "Rejoignez des milliers d'entreprises qui ont déjà fait le choix de l'excellence.",
+  "buttons": [
+    {
+      "text": "Démarrer Gratuitement",
+      "style": "primary",
+      "href": "#demo"
+    },
+    {
+      "text": "Parler à un Expert",
+      "style": "outline",
+      "href": "#contact"
+    }
+  ],
+  "badges": [
+    "✓ Essai gratuit de 14 jours",
+    "✓ Aucune carte bancaire requise",
+    "✓ Annulation en un clic"
+  ]
+}
+

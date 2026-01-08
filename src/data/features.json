@@ -1,0 +1,33 @@
+[
+  {
+    "badge": "Performance",
+    "title": "Des Temps de Chargement Éclair",
+    "description": "Notre technologie de pointe garantit une expérience utilisateur fluide et réactive. Profitez d'une interface ultra-rapide qui s'adapte instantanément à vos besoins.",
+    "benefits": [
+      "Optimisation automatique des ressources",
+      "Cache intelligent pour des performances maximales",
+      "Infrastructure scalable et fiable"
+    ],
+    "stat": {
+      "value": "3x",
+      "label": "Plus Rapide"
+    },
+    "icon": "⚡"
+  },
+  {
+    "badge": "Sécurité",
+    "title": "Vos Données Sont Notre Priorité",
+    "description": "Sécurité de niveau bancaire avec chiffrement end-to-end. Vos informations sont protégées par les technologies les plus avancées du marché.",
+    "benefits": [
+      "Chiffrement AES-256 de toutes les données",
+      "Authentification à deux facteurs",
+      "Sauvegardes automatiques quotidiennes"
+    ],
+    "stat": {
+      "value": "100%",
+      "label": "Sécurisé"
+    },
+    "icon": "🔒"
+  }
+]
+

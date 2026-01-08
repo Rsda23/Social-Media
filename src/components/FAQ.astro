@@ -1,55 +1,38 @@
 ---
-const faqs = [
-  {
-    question: "Comment puis-je commencer ?",
-    answer: "Créez un compte gratuit en quelques secondes. Aucune carte bancaire requise pour l'essai."
-  },
-  {
-    question: "Puis-je annuler à tout moment ?",
-    answer: "Oui, vous pouvez annuler votre abonnement à tout moment sans frais supplémentaires."
-  },
-  {
-    question: "Y a-t-il une limite d'utilisateurs ?",
-    answer: "Non, vous pouvez ajouter autant d'utilisateurs que nécessaire selon votre plan."
-  },
-  {
-    question: "Les données sont-elles sécurisées ?",
-    answer: "Absolument. Nous utilisons un chiffrement de niveau bancaire et des serveurs sécurisés."
-  }
-];
+import faq from '../data/faq.json';
 ---
 
 <section id="faq" class="py-24 bg-white">
   <div class="container mx-auto px-6 max-w-4xl">
     <div class="text-center mb-16 animate-on-scroll">
       <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-        Questions Fréquentes
+        {faq.title}
       </h2>
       <p class="text-xl text-gray-600">
-        Tout ce que vous devez savoir sur notre solution.
+        {faq.description}
       </p>
     </div>
 
     <div class="space-y-6">
-      {faqs.map((faq, index) => (
+      {faq.items.map((item, index) => (
         <div 
           class="bg-gray-50 rounded-2xl p-8 hover:bg-purple-50 transition-colors animate-on-scroll"
           style={`animation-delay: ${index * 0.1}s;`}
         >
           <h3 class="text-xl font-bold text-gray-900 mb-3">
-            {faq.question}
+            {item.question}
           </h3>
           <p class="text-gray-600 leading-relaxed">
-            {faq.answer}
+            {item.answer}
           </p>
         </div>
       ))}
     </div>
 
     <div class="text-center mt-12">
-      <p class="text-gray-600 mb-4">Vous avez d'autres questions ?</p>
-      <a href="#contact" class="text-purple-600 font-semibold hover:text-purple-700">
-        Contactez notre équipe →
+      <p class="text-gray-600 mb-4">{faq.contactText}</p>
+      <a href={faq.contactLink.href} class="text-purple-600 font-semibold hover:text-purple-700">
+        {faq.contactLink.text}
       </a>
     </div>
   </div>

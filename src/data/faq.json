@@ -1,0 +1,28 @@
+{
+  "title": "Questions Fréquentes",
+  "description": "Tout ce que vous devez savoir sur notre solution.",
+  "items": [
+    {
+      "question": "Comment puis-je commencer ?",
+      "answer": "Créez un compte gratuit en quelques secondes. Aucune carte bancaire requise pour l'essai."
+    },
+    {
+      "question": "Puis-je annuler à tout moment ?",
+      "answer": "Oui, vous pouvez annuler votre abonnement à tout moment sans frais supplémentaires."
+    },
+    {
+      "question": "Y a-t-il une limite d'utilisateurs ?",
+      "answer": "Non, vous pouvez ajouter autant d'utilisateurs que nécessaire selon votre plan."
+    },
+    {
+      "question": "Les données sont-elles sécurisées ?",
+      "answer": "Absolument. Nous utilisons un chiffrement de niveau bancaire et des serveurs sécurisés."
+    }
+  ],
+  "contactText": "Vous avez d'autres questions ?",
+  "contactLink": {
+    "text": "Contactez notre équipe →",
+    "href": "#contact"
+  }
+}
+

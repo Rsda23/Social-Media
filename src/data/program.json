@@ -1,0 +1,23 @@
+{
+  "banner": "AU PROGRAMME :",
+  "title": {
+    "text": "DES IDÉES QUI",
+    "highlight1": "CLAQUENT",
+    "middle": "& DES CONTENUS QUI",
+    "highlight2": "PERFORMENT"
+  },
+  "description": {
+    "line1": "Ici c'est le N, on transforme vos réseaux sociaux en terrain de jeu stratégique: formats forts, exécution express, et des KPIs qui prennent de la hauteur.",
+    "line2": "Le tout servi par une équipe rapide, fiable & (vraiment) créative."
+  },
+  "button": {
+    "text": "On vous présente ?",
+    "href": "#contact"
+  },
+  "images": {
+    "title": "../assets/image-title.png",
+    "left": "../assets/image-left.png",
+    "right": "../assets/image-right.png"
+  }
+}
+

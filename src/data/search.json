@@ -1,0 +1,16 @@
+{
+  "searchBar": {
+    "placeholder": "HOW TO KPI",
+    "icon": true
+  },
+  "title": {
+    "line1": "VOUS AVEZ CHERCHÉ",
+    "line2": "SOCIAL MEDIA CRÉATIF ?",
+    "line3": "BONNE IDÉE..."
+  },
+  "button": {
+    "text": "On vous souffle la prochaine!",
+    "href": "#contact"
+  }
+}
+

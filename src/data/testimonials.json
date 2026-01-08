@@ -1,0 +1,25 @@
+{
+  "title": "Ils Nous Font Confiance",
+  "description": "Découvrez ce que nos clients disent de nous.",
+  "items": [
+    {
+      "name": "Marie Dupont",
+      "role": "CEO, TechStart",
+      "content": "Cette solution a transformé notre façon de travailler. Nous avons gagné 50% de temps sur nos processus.",
+      "avatar": "👩‍💼"
+    },
+    {
+      "name": "Thomas Martin",
+      "role": "Designer, CreativeStudio",
+      "content": "Interface intuitive et design magnifique. Exactement ce que nous cherchions pour notre équipe.",
+      "avatar": "👨‍💻"
+    },
+    {
+      "name": "Sophie Bernard",
+      "role": "Manager, MarketPro",
+      "content": "Le support client est exceptionnel et les fonctionnalités dépassent nos attentes. Je recommande vivement !",
+      "avatar": "👩‍🚀"
+    }
+  ]
+}
+
