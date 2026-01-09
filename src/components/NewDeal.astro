@@ -1,0 +1,104 @@
+---
+import picto4 from '../assets/picto-4.png';
+import picto5 from '../assets/picto-5.png';
+import picto6 from '../assets/picto-6.png';
+import picto7 from '../assets/picto-7.png';
+---
+
+<section class="py-24 relative overflow-hidden" style="background-color: #0084FF;">
+  <div class="container mx-auto px-6 relative z-10">
+    <!-- Titre principal -->
+    <div class="text-center mb-16 animate-on-scroll">
+      <h2 class="text-4xl lg:text-5xl font-bold text-white uppercase tracking-wide" style="font-family: 'Climate Crisis', sans-serif; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
+        LE NEW DEAL
+      </h2>
+    </div>
+
+    <!-- Grille des 4 colonnes -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-16">
+      <!-- Colonne 1: CRÉATIFS -->
+      <div class="text-center space-y-4 animate-on-scroll">
+        <div class="flex justify-center mb-4">
+          <img 
+            src={picto4.src}
+            alt="Créatifs"
+            class="w-20 h-20 object-contain"
+          />
+        </div>
+        <h3 class="text-2xl font-bold text-white uppercase tracking-wide" style="font-family: 'Climate Crisis', sans-serif; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
+          CRÉATIFS
+        </h3>
+        <p class="text-white text-base lg:text-lg leading-relaxed" style="font-family: 'Montserrat', sans-serif;">
+          mais jamais déconnectés de vos objectifs.
+        </p>
+      </div>
+
+      <!-- Colonne 2: À L'AFFUT -->
+      <div class="text-center space-y-4 animate-on-scroll" style="animation-delay: 0.1s;">
+        <div class="flex justify-center mb-4">
+          <img 
+            src={picto5.src}
+            alt="À l'affut"
+            class="w-20 h-20 object-contain"
+          />
+        </div>
+        <h3 class="text-2xl font-bold text-white uppercase tracking-wide" style="font-family: 'Climate Crisis', sans-serif; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
+          À L'AFFUT
+        </h3>
+        <p class="text-white text-base lg:text-lg leading-relaxed" style="font-family: 'Montserrat', sans-serif;">
+          pour pouvoir chasser la trend sans rester à la traine.
+        </p>
+      </div>
+
+      <!-- Colonne 3: SOLIDES -->
+      <div class="text-center space-y-4 animate-on-scroll" style="animation-delay: 0.2s;">
+        <div class="flex justify-center mb-4">
+          <img 
+            src={picto6.src}
+            alt="Solides"
+            class="w-20 h-20 object-contain"
+          />
+        </div>
+        <h3 class="text-2xl font-bold text-white uppercase tracking-wide" style="font-family: 'Climate Crisis', sans-serif; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
+          SOLIDES
+        </h3>
+        <p class="text-white text-base lg:text-lg leading-relaxed" style="font-family: 'Montserrat', sans-serif;">
+          process fiables, méthodologie éprouvée.
+        </p>
+      </div>
+
+      <!-- Colonne 4: AGILES -->
+      <div class="text-center space-y-4 animate-on-scroll" style="animation-delay: 0.3s;">
+        <div class="flex justify-center mb-4">
+          <img 
+            src={picto7.src}
+            alt="Agiles"
+            class="w-20 h-20 object-contain"
+          />
+        </div>
+        <h3 class="text-2xl font-bold text-white uppercase tracking-wide" style="font-family: 'Climate Crisis', sans-serif; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
+          AGILES
+        </h3>
+        <p class="text-white text-base lg:text-lg leading-relaxed" style="font-family: 'Montserrat', sans-serif;">
+          là pour le quotidien aussi bien que pour les impondérables.
+        </p>
+      </div>
+    </div>
+
+    <!-- Bouton CTA -->
+    <div class="text-center animate-on-scroll">
+      <a 
+        href="#contact"
+        class="inline-block px-10 py-4 bg-black text-white font-bold text-lg rounded-lg hover:bg-gray-800 transition-all transform hover:scale-105" style="font-family: 'Montserrat', sans-serif;">
+        On fait affaire ?
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    border-radius: 2rem 2rem 0 0;
+  }
+</style>
+

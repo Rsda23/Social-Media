@@ -1,0 +1,72 @@
+---
+import part1 from '../assets/part-1.png';
+import part2 from '../assets/part-2.png';
+import part3 from '../assets/part-3.png';
+import part4 from '../assets/part-4.png';
+import part5 from '../assets/part-5.png';
+---
+
+<section class="py-24" style="background-color: #EFEFEF;">
+  <div class="container mx-auto px-6">
+    <!-- Section supérieure - Question et titre -->
+    <div class="mb-16 animate-on-scroll">
+      <!-- Question avec rotation -->
+      <div class="text-center mb-8" style="transform: rotate(-2deg) !important; transform-origin: center;">
+        <h2 class="text-4xl lg:text-5xl font-bold uppercase tracking-wide" style="font-family: 'Climate Crisis', sans-serif; color: #030508;">
+          ÇA VOUS SEMBLE <span style="color: #0084FF;">TROP BEAU ?</span>
+        </h2>
+      </div>
+      
+      <!-- Titre DEMANDEZ LEUR avec flèche -->
+      <div class="flex items-center gap-4 justify-center">
+        <h3 class="text-2xl lg:text-3xl font-bold uppercase tracking-wide" style="font-family: 'Climate Crisis', sans-serif; color: #030508;">
+          DEMANDEZ LEUR
+        </h3>
+        <!-- Icône flèche avec fond blanc et flèche bleue -->
+        <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="transform: rotate(-4deg); background-color: #FFFFFF;">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="transform: rotate(-45deg); color: #0084FF;">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section inférieure - Logos clients -->
+    <div class="flex justify-center items-center gap-8 lg:gap-12 animate-on-scroll" style="animation-delay: 0.2s;">
+      <img 
+        src={part1.src}
+        alt="Babolat"
+        style="width: 175px;"
+        class="object-contain opacity-70 hover:opacity-100 transition-opacity"
+      />
+      
+      <img 
+        src={part2.src}
+        alt="3 Brasseurs"
+        style="width: 175px;"
+        class="object-contain opacity-70 hover:opacity-100 transition-opacity"
+      />
+      
+      <img 
+        src={part3.src}
+        alt="Met' Lyon"
+        style="width: 175px;"
+        class="object-contain opacity-70 hover:opacity-100 transition-opacity"
+      />
+      
+      <img 
+        src={part4.src}
+        alt="GRDF"
+        style="width: 175px;"
+        class="object-contain opacity-70 hover:opacity-100 transition-opacity"
+      />
+      
+      <img 
+        src={part5.src}
+        alt="Zefirent"
+        style="width: 175px;"
+        class="object-contain opacity-70 hover:opacity-100 transition-opacity"
+      />
+    </div>
+  </div>
+</section>
