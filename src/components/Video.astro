@@ -1,23 +1,35 @@
 ---
 import video from '../data/video.json';
+
+// Convertir l'URL YouTube en format embed
+const getYouTubeEmbedUrl = (url: string) => {
+  const videoId = url.includes('watch?v=') 
+    ? url.split('watch?v=')[1].split('&')[0]
+    : url.split('/').pop()?.split('?')[0];
+  return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+};
+
+const embedUrl = getYouTubeEmbedUrl('https://www.youtube.com/watch?v=AI6uPdYDxvo');
+const thumbnailUrl = 'https://placehold.co/1920x1080/';
 ---
 
 <section class="relative w-full" style="height: 50vh;">
   <!-- Lecteur vidéo -->
   <div class="relative w-full h-full" style="background-color: #030508;">
-    <div class="relative w-full h-full">
+    <div id="video-container" class="relative w-full h-full" data-embed-url={embedUrl}>
       <!-- Image/Thumbnail de la vidéo -->
       <img
-        src={video.player.thumbnail}
+        id="video-thumbnail"
+        src={thumbnailUrl}
         alt="Video thumbnail"
         class="w-full h-full object-cover"
       />
       
       <!-- Overlay PLAY -->
-      <div class="absolute inset-0 flex items-center justify-center" style="background-color: rgba(3, 5, 8, 0.3);">
+      <div id="video-overlay" class="absolute inset-0 flex items-center justify-center cursor-pointer" style="background-color: rgba(3, 5, 8, 0.3);">
         <div class="flex flex-col items-center gap-4">
           <!-- Icône de lecture -->
-          <div class="w-16 h-16 bg-white bg-opacity-90 rounded-full flex items-center justify-center cursor-pointer hover:bg-opacity-100 transition-all">
+          <div class="w-16 h-16 bg-white bg-opacity-90 rounded-full flex items-center justify-center hover:bg-opacity-100 transition-all">
             <svg class="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24" style="color: #030508;">
               <path d="M8 5v14l11-7z"/>
             </svg>
@@ -32,3 +44,25 @@ import video from '../data/video.json';
   </div>
 </section>
 
+<script>
+  const container = document.getElementById('video-container');
+  const overlay = document.getElementById('video-overlay');
+
+  if (overlay && container) {
+    const embedUrl = container.getAttribute('data-embed-url');
+    
+    overlay.addEventListener('click', () => {
+      // Créer l'iframe YouTube
+      const iframe = document.createElement('iframe');
+      iframe.src = embedUrl || '';
+      iframe.className = 'w-full h-full';
+      iframe.setAttribute('frameborder', '0');
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+      iframe.setAttribute('allowfullscreen', '');
+      
+      // Remplacer le contenu
+      container.innerHTML = '';
+      container.appendChild(iframe);
+    });
+  }
+</script>
