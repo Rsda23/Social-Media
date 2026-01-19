@@ -16,3 +16,8 @@
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-20px); }
 }
+
+/* Letter spacing pour la police Climate Crisis */
+[style*="Climate Crisis"] {
+  letter-spacing: 2px !important;
+}
