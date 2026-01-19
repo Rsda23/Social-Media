@@ -16,9 +16,9 @@ const check = imageMap[services.left.image] || checkImage;
       <!-- Colonne gauche - Image et slogan -->
       <div class="space-y-6 animate-on-scroll">
         <!-- Image check et banner ensemble avec rotation -->
-        <div class="relative flex flex-col items-center lg:items-start" style="transform: rotate(-2deg) !important; transform-origin: center;">
-          <!-- Image check -->
-          <div class="w-full max-w-md">
+        <div class="relative flex flex-col items-start lg:items-start" style="transform: rotate(-2deg) !important; transform-origin: center;">
+          <!-- Image check - avant le banner partout -->
+          <div class="order-1 w-full max-w-[180px] lg:max-w-md lg:mb-0">
             <img 
               src={check.src}
               alt="Check list"
@@ -26,9 +26,9 @@ const check = imageMap[services.left.image] || checkImage;
             />
           </div>
           
-          <!-- Banner bleu positionné en bas de l'image -->
-          <div class="w-full text-white px-6 py-3 rounded-lg" style="background-color: #0084FF; margin-top: -1px;">
-            <span class="font-bold text-lg uppercase tracking-wide block text-center lg:text-left" style="font-family: 'Climate Crisis', sans-serif;">
+          <!-- Banner bleu - après l'image partout, style comme "NOS MÉTIERS" en mobile -->
+          <div class="order-2 text-white px-3 py-2 lg:px-6 lg:py-3 rounded-lg inline-block lg:w-full lg:-mt-px" style="background-color: #0084FF;">
+            <span class="font-bold text-sm lg:text-lg uppercase tracking-wide" style="font-family: 'Climate Crisis', sans-serif;">
               {services.left.banner}
             </span>
           </div>
