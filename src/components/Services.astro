@@ -18,7 +18,7 @@ const check = imageMap[services.left.image] || checkImage;
         <!-- Image check et banner ensemble avec rotation -->
         <div class="relative flex flex-col items-start lg:items-start" style="transform: rotate(-2deg) !important; transform-origin: center;">
           <!-- Image check - avant le banner partout -->
-          <div class="order-1 w-full max-w-[180px] lg:max-w-md lg:mb-0">
+          <div class="order-1 w-full max-w-[140px] lg:max-w-[200px] lg:mb-0">
             <img 
               src={check.src}
               alt="Check list"
@@ -26,8 +26,8 @@ const check = imageMap[services.left.image] || checkImage;
             />
           </div>
           
-          <!-- Banner bleu - après l'image partout, style comme "NOS MÉTIERS" en mobile -->
-          <div class="order-2 text-white px-3 py-2 lg:px-6 lg:py-3 rounded-lg inline-block lg:w-full lg:-mt-px" style="background-color: #0084FF;">
+          <!-- Banner bleu - après l'image partout, s'arrête au texte -->
+          <div class="order-2 text-white px-3 py-2 lg:px-6 lg:py-3 rounded-lg inline-block lg:-mt-px" style="background-color: #0084FF;">
             <span class="font-bold text-sm lg:text-lg uppercase tracking-wide" style="font-family: 'Climate Crisis', sans-serif;">
               {services.left.banner}
             </span>
