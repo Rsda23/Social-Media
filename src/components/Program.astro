@@ -3,6 +3,8 @@ import program from '../data/program.json';
 import imageTitle from '../assets/image-title.png';
 import imageLeft from '../assets/image-left.png';
 import imageRight from '../assets/image-right.png';
+import imageLeftMobile from '../assets/image-left-mobile.png';
+import imageRightMobile from '../assets/image-right-mobile.png';
 
 // Mapping des images
 const imageMap: Record<string, any> = {
@@ -16,15 +18,15 @@ const leftImage = imageMap[program.images.left] || imageLeft;
 const rightImage = imageMap[program.images.right] || imageRight;
 ---
 
-<section class="py-24 bg-white">
+<section class="md:py-24 py-12 bg-white">
   <div class="container mx-auto px-6">
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
       <!-- Colonne gauche -->
       <div class="space-y-12">
         <!-- Section haut gauche -->
-        <div class="space-y-4 animate-on-scroll" style="transform: rotate(-4deg) !important; transform-origin: center;">
+        <div class="space-y-4 animate-on-scroll md:-rotate-3 origin-center text-center md:text-start">
           <!-- Image des mains -->
-          <div class="mb-0 ml-20" >
+          <div class="flex justify-center mb-0 ml-0 md:justify-normal md:ml-20" >
             <img 
               src={titleImage.src}
               alt="Deux mains"
@@ -46,9 +48,14 @@ const rightImage = imageMap[program.images.right] || imageRight;
         <!-- Section bas gauche - Image smartphone avec raquette -->
         <div class="animate-on-scroll" style="animation-delay: 0.2s;">
           <img 
+            src={imageLeftMobile.src}
+            alt="Smartphone avec raquette"
+            class="w-full h-auto object-contain md:hidden"
+          />
+          <img 
             src={leftImage.src}
             alt="Smartphone avec raquette"
-            class="w-full h-auto object-contain"
+            class="w-full h-auto object-contain hidden md:block"
           />
         </div>
       </div>
@@ -58,9 +65,14 @@ const rightImage = imageMap[program.images.right] || imageRight;
         <!-- Section haut droite - Image smartphone avec bière -->
         <div class="animate-on-scroll" style="animation-delay: 0.1s;">
           <img 
+            src={imageRightMobile.src}
+            alt="Smartphone avec bière"
+            class="w-full h-auto object-contain md:hidden"
+          />
+          <img 
             src={rightImage.src}
             alt="Smartphone avec bière"
-            class="w-full h-auto object-contain"
+            class="w-full h-auto object-contain hidden md:block"
           />
         </div>
         
