@@ -55,7 +55,7 @@ const logo = imageMap[hero.logo.src] || logoImage;
           {hero.buttons.map((button) => (
             <a 
               href={button.href}
-              class={`w-full sm:w-auto px-4 py-4 sm:px-6 sm:py-3 lg:px-8 lg:py-4 xl:px-10 xl:py-5 text-sm sm:text-base lg:text-lg xl:text-xl font-medium rounded transition-all inline-block text-center ${
+              class={`w-full sm:w-auto px-4 py-4 sm:px-6 sm:py-3 lg:px-10 lg:py-4 xl:px-10 xl:py-4 text-sm sm:text-base lg:text-lg xl:text-lg font-bold rounded-lg transition-all transform hover:scale-105 inline-block text-center ${
                 button.style === 'outline' 
                   ? 'bg-white hover:bg-gray-100 text-primary-blue border border-primary-dark' 
                   : 'bg-primary-blue text-white hover:opacity-90'
