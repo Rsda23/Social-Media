@@ -1,5 +1,6 @@
 ---
 import video from '../data/video.json';
+import imgVideo from '../assets/img-video.png';
 
 // Convertir l'URL YouTube en format embed
 const getYouTubeEmbedUrl = (url: string) => {
@@ -10,7 +11,6 @@ const getYouTubeEmbedUrl = (url: string) => {
 };
 
 const embedUrl = getYouTubeEmbedUrl('https://www.youtube.com/watch?v=AI6uPdYDxvo');
-const thumbnailUrl = 'https://placehold.co/1920x1080/';
 ---
 
 <section class="relative w-full" style="height: 50vh;">
@@ -20,7 +20,7 @@ const thumbnailUrl = 'https://placehold.co/1920x1080/';
       <!-- Image/Thumbnail de la vidéo -->
       <img
         id="video-thumbnail"
-        src={thumbnailUrl}
+        src={imgVideo.src}
         alt="Video thumbnail"
         class="w-full h-full object-cover"
       />

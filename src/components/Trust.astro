@@ -13,20 +13,17 @@ import part5 from '../assets/part-5.png';
       <!-- Question avec rotation -->
       <div class="text-center mb-8 rotate-2deg">
         <h2 class="text-4xl lg:text-5xl font-bold uppercase tracking-wide font-climate-crisis text-primary-dark">
-          ÇA VOUS SEMBLE <span class="text-primary-blue">TROP BEAU ?</span>
+          ÇA VOUS SEMBLE <span class="text-primary-blue">TROP BEAU</span> <span class="text-primary-dark">?</span>
         </h2>
       </div>
       
       <!-- Titre DEMANDEZ LEUR avec flèche -->
-      <div class="flex items-center gap-4 justify-center">
-        <h3 class="text-2xl lg:text-3xl font-bold uppercase tracking-wide font-climate-crisis text-primary-dark">
-          DEMANDEZ LEUR
-        </h3>
-        <!-- Icône flèche avec fond blanc et flèche bleue -->
-        <div class="w-12 h-12 rounded-lg flex items-center justify-center rotate-4deg bg-white">
-          <svg class="w-6 h-6 text-primary-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="transform: rotate(-45deg);">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-          </svg>
+      <div class="flex items-center justify-center">
+        <!-- Banner bleu avec texte blanc -->
+        <div class="bg-primary-blue px-6 py-3 lg:px-8 lg:py-4 rounded-xs rotate-2deg relative demandez-leur-button">
+          <h3 class="text-xl lg:text-3xl font-bold uppercase tracking-wide font-climate-crisis text-white">
+            DEMANDEZ LEUR
+          </h3>
         </div>
       </div>
     </div>
@@ -70,3 +67,21 @@ import part5 from '../assets/part-5.png';
     </div>
   </div>
 </section>
+
+<style>
+  .demandez-leur-button::after {
+    content: '';
+    position: absolute;
+    top: 90%;
+    right: -2.5rem;
+    transform: translateY(-50%) rotate(-4deg);
+    width: 48px;
+    height: 48px;
+    background-color: white;
+    border-radius: 8px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%230084FF'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 14l-7 7m0 0l-7-7m7 7V3' transform='rotate(-45 12 12)'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px 24px;
+  }
+</style>
