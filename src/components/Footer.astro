@@ -3,7 +3,7 @@ import logoFooter from '../assets/logo-footer.png';
 import footerImage from '../assets/footer-image.png';
 ---
 
-<section class="py-24 relative" style="background-color: #030508;">
+<section class="py-24 relative bg-primary-dark">
   <div class="absolute left-0 md:bottom-[360px] bottom-[780px] z-10">
     <img 
       src={footerImage.src}
@@ -11,20 +11,20 @@ import footerImage from '../assets/footer-image.png';
       class="h-48 md:h-80 w-auto object-contain object-left"
     />
   </div>
-  <div class="container mx-auto px-6 relative z-20">
-    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+  <div class="md:mx-60 px-6 relative z-20">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
       <!-- Section gauche - Titre -->
       <div class="animate-on-scroll">
-        <h2 class="text-4xl lg:text-5xl xl:text-6xl font-bold uppercase leading-tight text-white" style="font-family: 'Climate Crisis', sans-serif;">
+        <h2 class="text-4xl lg:text-5xl xl:text-6xl font-bold uppercase leading-tight text-white font-climate-crisis">
           DES RÉSEAUX<br />
           SOCIAUX QUI<br />
-          <span style="color: #0084FF;">ARRÊTENT</span><br />
+          <span class="text-primary-blue">ARRÊTENT</span><br />
           LE SCROLL !
         </h2>
       </div>
 
       <!-- Section droite - Logo, texte et boutons -->
-      <div class="space-y-6 animate-on-scroll" style="animation-delay: 0.2s;">
+      <div class="space-y-6 animate-on-scroll lg:justify-self-end" style="animation-delay: 0.2s;">
         <!-- Logo -->
         <div class="mb-6">
           <img 
@@ -35,7 +35,7 @@ import footerImage from '../assets/footer-image.png';
         </div>
 
         <!-- Texte descriptif -->
-        <p class="text-white text-base lg:text-lg leading-relaxed" style="font-family: 'Montserrat', sans-serif;">
+        <p class="text-white text-base lg:text-lg leading-relaxed font-montserrat">
           NEWIC est une agence de conseil et de création qui accompagne les marques dans leurs enjeux de communication et de transformation.
         </p>
 
@@ -43,22 +43,20 @@ import footerImage from '../assets/footer-image.png';
         <div class="flex flex-col sm:flex-row gap-4 pt-4">
           <a 
             href="#agence"
-            class="px-6 py-3 rounded-lg font-medium text-white border transition-all hover:bg-white/10" 
-            style="background-color: #030508; border-color: #0084FF; border-width: 1px; font-family: 'Montserrat', sans-serif;">
+            class="px-6 py-3 rounded-lg font-medium text-white border transition-all hover:bg-white/10 bg-primary-dark border-primary-blue font-montserrat" 
+            style="border-width: 1px;">
             Découvrir l'agence
           </a>
           
           <a 
             href="#contact"
-            class="px-6 py-3 rounded-lg font-medium transition-all hover:opacity-90" 
-            style="background-color: #FFFFFF; color: #030508; font-family: 'Montserrat', sans-serif;">
+            class="px-6 py-3 rounded-lg font-medium transition-all hover:opacity-90 bg-white text-primary-dark font-montserrat">
             Venez on en parle
           </a>
           
           <a 
             href="#devis"
-            class="px-6 py-3 rounded-lg font-medium text-white transition-all hover:opacity-90" 
-            style="background-color: #0084FF; font-family: 'Montserrat', sans-serif;">
+            class="px-6 py-3 rounded-lg font-medium text-white transition-all hover:opacity-90 bg-primary-blue font-montserrat">
             Pas de blabla, un devis
           </a>
         </div>

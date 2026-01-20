@@ -22,11 +22,11 @@ const topDecoration = imageMap[creativity.right.decorations.top] || picto2;
 const bottomDecoration = imageMap[creativity.right.decorations.bottom] || picto3;
 ---
 
-<section class="py-24 relative" style="background-color: #EFEFEF;">
+<section class="py-24 relative bg-primary-light">
   <div class="container mx-auto px-6 relative z-2">
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
       <!-- Colonne gauche - Fond noir -->
-      <div class="rounded-4xl p-8 lg:p-12 space-y-8 animate-on-scroll" style="padding-top: 0px; background-color: #030508;">
+      <div class="rounded-4xl p-8 lg:p-12 pt-0 space-y-8 animate-on-scroll bg-primary-dark">
         <!-- Main pointant -->
         <div class="flex justify-start">
           <img 
@@ -39,14 +39,14 @@ const bottomDecoration = imageMap[creativity.right.decorations.bottom] || picto3
         <!-- Titres avec mots en bleu -->
         <div class="space-y-4">
           {creativity.left.items.map((item) => (
-            <h2 class="text-lg font-bold text-white uppercase leading-tight" style="font-family: 'Climate Crisis', sans-serif;">
-              {item.text} <span style="color: #0084FF;">{item.highlight}</span>.
+            <h2 class="text-lg font-bold text-white uppercase leading-tight font-climate-crisis">
+              {item.text} <span class="text-primary-blue">{item.highlight}</span>.
             </h2>
           ))}
         </div>
 
         <!-- Icône flèche -->
-        <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="transform: rotate(-4deg); background-color: #0084FF;">
+        <div class="w-12 h-12 rounded-lg flex items-center justify-center rotate-4deg bg-primary-blue">
           <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="transform: rotate(-45deg);">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
           </svg>
@@ -61,7 +61,7 @@ const bottomDecoration = imageMap[creativity.right.decorations.bottom] || picto3
                 alt={item.type === 'plus' ? 'Plus' : 'Moins'}
                 class="w-6 h-6 object-contain"
               />
-              <span class="text-white font-bold text-lg uppercase" style="font-family: 'Climate Crisis', sans-serif;">
+              <span class="text-white font-bold text-lg uppercase font-climate-crisis">
                 {item.text}
               </span>
             </li>
@@ -72,7 +72,7 @@ const bottomDecoration = imageMap[creativity.right.decorations.bottom] || picto3
       <!-- Colonne droite - Fond gris clair -->
       <div class="md:relative space-y-6 animate-on-scroll md:top-[-170px]" style="animation-delay: 0.2s;">
         <!-- Banner bleu et Titre avec rotation -->
-        <div style="transform: rotate(-2deg) !important; transform-origin: center;">
+        <div class="rotate-2deg">
           <!-- Décorations bleues 3D Top -->
           <div class="top-0 right-0 left-0 w-32 h-32 lg:w-48 lg:h-48 z-10 hidden md:block">
             <img 
@@ -82,19 +82,19 @@ const bottomDecoration = imageMap[creativity.right.decorations.bottom] || picto3
             />
           </div>
           <!-- Banner bleu -->
-          <div class="text-white px-6 py-3 rounded-lg inline-block mb-4 md:ml-20" style="background-color: #0084FF;">
-            <span class="font-bold text-lg uppercase tracking-wide" style="font-family: 'Climate Crisis', sans-serif;">
+          <div class="text-white px-6 py-3 rounded-lg inline-block mb-4 md:ml-20 bg-primary-blue">
+            <span class="font-bold text-lg uppercase tracking-wide font-climate-crisis">
               {creativity.right.banner}
             </span>
           </div>
 
           <!-- Titre -->
           <div class="space-y-2">
-            <h2 class="text-3xl lg:text-4xl font-bold uppercase leading-tight md:ml-20" style="font-family: 'Climate Crisis', sans-serif; color: #030508;">
+            <h2 class="text-3xl lg:text-4xl font-bold uppercase leading-tight md:ml-20 font-climate-crisis text-primary-dark">
               {creativity.right.title.line1}
             </h2>
-            <h2 class="text-3xl lg:text-4xl font-bold uppercase leading-tight md:ml-20" style="font-family: 'Climate Crisis', sans-serif; color: #030508;">
-              {creativity.right.title.line2} <span style="color: #0084FF;">{creativity.right.title.line3}</span>
+            <h2 class="text-3xl lg:text-4xl font-bold uppercase leading-tight md:ml-20 font-climate-crisis text-primary-dark">
+              {creativity.right.title.line2} <span class="text-primary-blue">{creativity.right.title.line3}</span>
             </h2>
           </div>
         </div>
@@ -102,7 +102,7 @@ const bottomDecoration = imageMap[creativity.right.decorations.bottom] || picto3
         <!-- Paragraphes -->
         <div class="space-y-4 pt-4 md:ml-20">
           {creativity.right.paragraphs.map((paragraph) => (
-            <p class="text-base lg:text-lg leading-relaxed font-black" style="font-family: 'Montserrat', sans-serif; color: #030508;">
+            <p class="text-base lg:text-lg leading-relaxed font-black font-montserrat text-primary-dark">
               {paragraph}
             </p>
           ))}

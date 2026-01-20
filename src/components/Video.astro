@@ -15,7 +15,7 @@ const thumbnailUrl = 'https://placehold.co/1920x1080/';
 
 <section class="relative w-full" style="height: 50vh;">
   <!-- Lecteur vidéo -->
-  <div class="relative w-full h-full" style="background-color: #030508;">
+  <div class="relative w-full h-full bg-primary-dark">
     <div id="video-container" class="relative w-full h-full" data-embed-url={embedUrl}>
       <!-- Image/Thumbnail de la vidéo -->
       <img
@@ -35,7 +35,7 @@ const thumbnailUrl = 'https://placehold.co/1920x1080/';
             </svg>
           </div>
           <!-- Texte PLAY -->
-          <span class="text-white text-4xl font-bold uppercase tracking-wider" style="font-family: 'Climate Crisis', sans-serif;">
+          <span class="text-white text-4xl font-bold uppercase tracking-wider font-climate-crisis">
             {video.player.playText}
           </span>
         </div>
