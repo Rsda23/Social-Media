@@ -5,11 +5,11 @@
   },
   "title": {
     "line1": "VOUS AVEZ CHERCHÉ",
-    "line2": "SOCIAL MEDIA CRÉATIF ?",
+    "line2": "SOCIAL MEDIA CRÉATIF\u00A0?",
     "line3": "BONNE IDÉE..."
   },
   "button": {
-    "text": "On vous souffle la prochaine!",
+    "text": "On vous souffle la prochaine !",
     "href": "#contact"
   }
 }

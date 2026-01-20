@@ -10,15 +10,15 @@ const imageMap: Record<string, any> = {
 const check = imageMap[services.left.image] || checkImage;
 ---
 
-<section class="py-24 bg-white">
+<section class="md:py-24 py-12 bg-white">
   <div class="container mx-auto px-6">
     <div class="grid lg:grid-cols-3 gap-12 lg:gap-16">
       <!-- Colonne gauche - Image et slogan -->
       <div class="space-y-6 animate-on-scroll">
         <!-- Image check et banner ensemble avec rotation -->
-        <div class="relative flex flex-col items-center lg:items-start" style="transform: rotate(-2deg) !important; transform-origin: center;">
-          <!-- Image check -->
-          <div class="w-full max-w-md">
+        <div class="relative flex flex-col items-center md:items-start rotate-2deg">
+          <!-- Image check - avant le banner partout -->
+          <div class="order-1 w-full max-w-[140px] lg:max-w-[200px] lg:mb-0">
             <img 
               src={check.src}
               alt="Check list"
@@ -26,33 +26,33 @@ const check = imageMap[services.left.image] || checkImage;
             />
           </div>
           
-          <!-- Banner bleu positionné en bas de l'image -->
-          <div class="w-full text-white px-6 py-3 rounded-lg" style="background-color: #0084FF; margin-top: -1px;">
-            <span class="font-bold text-lg uppercase tracking-wide block text-center lg:text-left" style="font-family: 'Climate Crisis', sans-serif;">
+          <!-- Banner bleu - après l'image partout, s'arrête au texte -->
+          <div class="order-2 text-white px-3 py-2 lg:px-6 lg:py-3 rounded-lg inline-block lg:-mt-px bg-primary-blue">
+            <span class="font-bold text-sm lg:text-lg uppercase tracking-wide font-climate-crisis">
               {services.left.banner}
             </span>
           </div>
         </div>
 
         <!-- Slogan avec rotation -->
-        <div class="space-y-2" style="transform: rotate(-2deg) !important; transform-origin: center;">
-          <h2 class="text-3xl lg:text-4xl font-bold uppercase leading-tight" style="font-family: 'Climate Crisis', sans-serif; color: #030508;">
-            {services.left.slogan.line1}
+        <div class="space-y-2 rotate-2deg text-center md:text-left">
+          <h2 class="text-3xl lg:text-4xl font-bold uppercase leading-tight font-climate-crisis text-primary-dark">
+            {services.left.slogan.line1} 
           </h2>
-          <h2 class="text-3xl lg:text-4xl font-bold uppercase leading-tight" style="font-family: 'Climate Crisis', sans-serif; color: #030508;">
+          <h2 class="text-3xl lg:text-4xl font-bold uppercase leading-tight font-climate-crisis text-primary-dark">
             {services.left.slogan.line2}
           </h2>
-          <h2 class="text-3xl lg:text-4xl font-bold uppercase leading-tight" style="font-family: 'Climate Crisis', sans-serif; color: #030508;">
-            EN <span style="color: #0084FF;">VRAI !</span>
+          <h2 class="text-3xl lg:text-4xl font-bold uppercase leading-tight font-climate-crisis text-primary-dark">
+            EN <span class="text-primary-blue">VRAI !</span>
           </h2>
         </div>
       </div>
 
       <!-- Colonne milieu - Nos métiers -->
-      <div class="space-y-6 animate-on-scroll" style="animation-delay: 0.1s; padding-bottom: 2rem;">
+      <div class="space-y-6 animate-on-scroll pb-0" style="animation-delay: 0.1s;">
         <!-- Banner bleu avec rotation -->
-        <div class="text-white px-6 py-3 rounded-lg inline-block" style="background-color: #0084FF; transform: rotate(-2deg) !important; transform-origin: center;">
-          <span class="font-bold text-lg uppercase tracking-wide" style="font-family: 'Climate Crisis', sans-serif;">
+        <div class="text-white px-6 py-3 rounded-lg inline-block bg-primary-blue rotate-2deg">
+          <span class="font-bold text-lg uppercase tracking-wide font-climate-crisis">
             {services.middle.title}
           </span>
         </div>
@@ -61,10 +61,10 @@ const check = imageMap[services.left.image] || checkImage;
         <ul class="space-y-6">
           {services.middle.items.map((item) => (
             <li>
-              <h3 class="font-bold text-base mb-2" style="font-family: 'Montserrat', sans-serif; color: #030508; line-height: 1;">
+              <h3 class="font-bold text-base mb-2 font-montserrat text-primary-dark" style="line-height: 1;">
                 {item.title}
               </h3>
-              <p class="text-base lg:text-lg leading-relaxed font-medium" style="font-family: 'Montserrat', sans-serif; color: #B4B4B4;">
+              <p class="text-base lg:text-lg leading-relaxed font-medium font-montserrat" style="color: #B4B4B4;">
                 {item.description}
               </p>
             </li>
@@ -73,10 +73,10 @@ const check = imageMap[services.left.image] || checkImage;
       </div>
 
       <!-- Colonne droite - Ce qu'on fait -->
-      <div class="space-y-6 animate-on-scroll" style="animation-delay: 0.2s; padding-bottom: 2rem;">
+      <div class="space-y-6 animate-on-scroll pb-0" style="animation-delay: 0.2s;">
         <!-- Banner bleu avec rotation -->
-        <div class="text-white px-6 py-3 rounded-lg inline-block" style="background-color: #0084FF; transform: rotate(-2deg) !important; transform-origin: center;">
-          <span class="font-bold text-lg uppercase tracking-wide" style="font-family: 'Climate Crisis', sans-serif;">
+        <div class="text-white px-6 py-3 rounded-lg inline-block bg-primary-blue rotate-2deg">
+          <span class="font-bold text-lg uppercase tracking-wide font-climate-crisis">
             {services.right.title}
           </span>
         </div>
@@ -85,10 +85,10 @@ const check = imageMap[services.left.image] || checkImage;
         <ul class="space-y-6">
           {services.right.items.map((item) => (
             <li>
-              <h3 class="font-bold text-base mb-2" style="font-family: 'Montserrat', sans-serif; color: #030508; line-height: 1;">
+              <h3 class="font-bold text-base mb-2 font-montserrat text-primary-dark" style="line-height: 1;">
                 {item.title}
               </h3>
-              <p class="text-base lg:text-lg leading-relaxed font-medium" style="font-family: 'Montserrat', sans-serif; color: #B4B4B4;">
+              <p class="text-base lg:text-lg leading-relaxed font-medium font-montserrat" style="color: #B4B4B4;">
                 {item.description}
               </p>
             </li>

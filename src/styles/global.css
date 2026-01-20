@@ -16,3 +16,48 @@
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-20px); }
 }
+
+/* Letter spacing pour la police Climate Crisis */
+[style*="Climate Crisis"],
+.font-climate-crisis {
+  letter-spacing: 2px !important;
+}
+
+/* Classes utilitaires pour les styles répétés */
+.rotate-2deg {
+  transform: rotate(-2deg) !important;
+  transform-origin: center;
+}
+
+.rotate-4deg {
+  transform: rotate(-4deg) !important;
+  transform-origin: center;
+}
+
+.bg-primary-blue {
+  background-color: #0084FF;
+}
+
+.bg-primary-dark {
+  background-color: #030508;
+}
+
+.bg-primary-light {
+  background-color: #EFEFEF;
+}
+
+.text-primary-blue {
+  color: #0084FF;
+}
+
+.text-primary-dark {
+  color: #030508;
+}
+
+.font-climate-crisis {
+  font-family: 'Climate Crisis', sans-serif;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}

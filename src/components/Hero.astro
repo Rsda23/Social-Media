@@ -13,31 +13,32 @@ const heroImage = imageMap[hero.image.src] || headerImage;
 const logo = imageMap[hero.logo.src] || logoImage;
 ---
 
-<section class="relative min-h-[70vh] flex items-center overflow-hidden" style="background-color: #0084FF;">
-  <div class="flex flex-col lg:flex-row w-full h-[70vh] gap-0 ">
+<section class="relative md:min-h-[70vh] flex items-center overflow-hidden bg-primary-blue">
+  <div class="flex flex-col-reverse md:flex-row w-full md:h-[70vh] gap-0">
     <!-- Section gauche - Fond noir -->
-    <div class="flex-1 flex flex-col justify-between p-4 sm:p-6 lg:p-12 rounded-tr-3xl rounded-br-3xl relative z-10" style="background-color: #030508;">
-      <!-- Logo -->
-      <div class="flex items-center mb-4 lg:mb-8">
-        <img 
-          src={logo.src}
-          alt={hero.logo.alt}
-          class="h-12 sm:h-14 lg:h-16 w-auto"
-        />
-      </div>
+    <div class="flex-1 flex flex-col justify-between p-12 md:p-4 sm:p-6 lg:p-12 xl:p-16 md:rounded-tr-3xl md:rounded-br-3xl relative z-10 bg-primary-dark">
+      
 
       <!-- Contenu principal -->
-      <div class="flex-1 flex flex-col justify-center space-y-4 sm:space-y-6 lg:space-y-8 max-w-2xl">
+      <div class="flex-1 flex flex-col justify-center space-y-4 sm:space-y-6 lg:space-y-6 xl:space-y-8 max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto">
+        <!-- Logo -->
+        <div class="flex items-center mb-4 lg:mb-6 xl:mb-8">
+          <img 
+            src={logo.src}
+            alt={hero.logo.alt}
+            class="h-12 sm:h-14 lg:h-16 xl:h-20 w-auto"
+          />
+        </div>
         <!-- Titre principal -->
-        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white" style="font-family: 'Climate Crisis', sans-serif;">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight text-white font-climate-crisis">
           <span class="block">
-            {hero.title.line1} <span style="color: #0084FF;">{hero.title.line1Highlight}</span>,
+            {hero.title.line1} <span class="text-primary-blue">{hero.title.line1Highlight}</span>,
           </span>
           <span class="block">{hero.title.line2}</span>
           <span class="block">{hero.title.line3}</span>
           <span class="block">
             {hero.title.line4Highlight ? (
-              <span style="color: #0084FF;">{hero.title.line4.replace('!', ' !')}</span>
+              <span class="text-primary-blue">{hero.title.line4.replace('!', ' !')}</span>
             ) : (
               <span>{hero.title.line4.replace('!', ' !')}</span>
             )}
@@ -45,23 +46,23 @@ const logo = imageMap[hero.logo.src] || logoImage;
         </h1>
 
         <!-- Texte descriptif -->
-        <p class="text-sm sm:text-base lg:text-xl text-white leading-relaxed max-w-xl font-bold" style="font-family: 'Montserrat', sans-serif;">
+        <p class="text-sm sm:text-base lg:text-xl xl:text-2xl 2xl:text-3xl text-white leading-relaxed max-w-xl lg:max-w-2xl xl:max-w-3xl font-bold font-montserrat">
           {hero.description}
         </p>
 
         <!-- Boutons CTA -->
-        <div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-2 lg:pt-4">
+        <div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 lg:gap-5 xl:gap-6 pt-2 lg:pt-4 xl:pt-6 items-stretch sm:items-center">
           {hero.buttons.map((button) => (
             <a 
               href={button.href}
-              class={`px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 text-sm sm:text-base font-medium rounded transition-all ${
+              class={`w-full sm:w-auto px-4 py-4 sm:px-6 sm:py-3 lg:px-10 lg:py-4 xl:px-10 xl:py-4 text-sm sm:text-base lg:text-lg xl:text-lg font-bold rounded-lg transition-all transform hover:scale-105 inline-block text-center ${
                 button.style === 'outline' 
-                  ? 'bg-white hover:bg-gray-100' 
-                  : ''
+                  ? 'bg-white hover:bg-gray-100 text-primary-blue border border-primary-dark' 
+                  : 'bg-primary-blue text-white hover:opacity-90'
               }`}
               style={button.style === 'outline' 
-                ? 'border: 1px solid #030508; color: #0084FF;' 
-                : 'background-color: #0084FF; color: white;'}
+                ? 'border-width: 1px; min-height: 48px;' 
+                : 'min-height: 48px;'}
             >
               {button.text}
             </a>
@@ -71,12 +72,12 @@ const logo = imageMap[hero.logo.src] || logoImage;
     </div>
 
     <!-- Section droite - Fond bleu -->
-    <div class="flex-1 flex items-center justify-start relative overflow-hidden min-h-[40vh] lg:min-h-0" style="margin-left: -24px; clip-path: inset(0 0 0 24px); background-color: #0084FF;">
+    <div class="flex-1 flex items-center justify-start relative overflow-hidden min-h-[40vh] lg:min-h-0 bg-primary-blue" style="margin-left: -24px; clip-path: inset(0 0 0 24px);">
       <!-- Image header -->
       <img 
         src={heroImage.src}
         alt={hero.image.alt}
-        class="w-3/4 max-w-md h-auto object-contain translate-x-4 translate-y-4"
+        class="w-full max-w-xl h-auto object-contain object-left translate-x-4 translate-y-4 md:w-[90%] md:h-[90%] md:max-w-none"
       />
     </div>
   </div>
