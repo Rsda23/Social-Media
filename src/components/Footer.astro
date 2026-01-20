@@ -3,73 +3,68 @@ import logoFooter from '../assets/logo-footer.png';
 import footerImage from '../assets/footer-image.png';
 ---
 
-<section class="py-24 relative bg-primary-dark">
-  <div class="absolute left-0 md:bottom-[360px] bottom-[780px] z-10">
-    <img 
-      src={footerImage.src}
-      alt="Footer image"
-      class="h-48 md:h-80 w-auto object-contain object-left"
-    />
-  </div>
-  <div class="md:mx-60 px-6 relative z-20">
-    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
-      <!-- Section gauche - Titre -->
-      <div class="animate-on-scroll">
-        <h2 class="text-4xl lg:text-5xl xl:text-6xl font-bold uppercase leading-tight text-white font-climate-crisis">
-          DES RÉSEAUX<br />
-          SOCIAUX QUI<br />
-          <span class="text-primary-blue">ARRÊTENT</span><br />
-          LE SCROLL !
-        </h2>
-      </div>
-
-      <!-- Section droite - Logo, texte et boutons -->
-      <div class="space-y-6 animate-on-scroll lg:justify-self-end" style="animation-delay: 0.2s;">
-        <!-- Logo -->
-        <div class="mb-6">
-          <img 
-            src={logoFooter.src}
-            alt="NEWIC Logo"
-            class="h-16 lg:h-20 w-auto object-contain"
-          />
+<section class="bg-[#EFEFEF]">
+  <div class="py-24 relative bg-primary-dark rounded-t-4xl">
+    <div class="absolute left-0 md:bottom-[360px] bottom-[780px] z-10">
+      <img 
+        src={footerImage.src}
+        alt="Footer image"
+        class="h-48 md:h-80 w-auto object-contain object-left"
+      />
+    </div>
+    <div class="md:mx-60 px-6 relative z-20">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+        <!-- Section gauche - Titre -->
+        <div class="animate-on-scroll">
+          <h2 class="text-4xl lg:text-5xl xl:text-6xl font-bold uppercase leading-tight text-white font-climate-crisis">
+            DES RÉSEAUX<br />
+            SOCIAUX QUI<br />
+            <span class="text-primary-blue">ARRÊTENT</span><br />
+            LE SCROLL !
+          </h2>
         </div>
-
-        <!-- Texte descriptif -->
-        <p class="text-white text-base lg:text-lg leading-relaxed font-montserrat">
-          NEWIC est une agence de conseil et de création qui accompagne les marques dans leurs enjeux de communication et de transformation.
-        </p>
-
-        <!-- Boutons CTA -->
-        <div class="flex flex-col sm:flex-row gap-4 pt-4 items-stretch sm:items-center">
-          <a 
-            href="#agence"
-            class="w-full sm:w-auto px-4 py-4 sm:px-6 sm:py-3 lg:px-10 lg:py-4 rounded-lg font-bold text-lg text-white border transition-all transform hover:scale-105 hover:bg-white/10 bg-primary-dark border-primary-blue font-montserrat inline-block text-center" 
-            style="border-width: 1px; min-height: 48px;">
-            Découvrir l'agence
-          </a>
-          
-          <a 
-            href="#contact"
-            class="w-full sm:w-auto px-4 py-4 sm:px-6 sm:py-3 lg:px-10 lg:py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-105 hover:opacity-90 bg-white text-primary-dark font-montserrat inline-block text-center"
-            style="min-height: 48px;">
-            Venez on en parle
-          </a>
-          
-          <a 
-            href="#devis"
-            class="w-full sm:w-auto px-4 py-4 sm:px-6 sm:py-3 lg:px-10 lg:py-4 rounded-lg font-bold text-lg text-white transition-all transform hover:scale-105 hover:opacity-90 bg-primary-blue font-montserrat inline-block text-center"
-            style="min-height: 48px;">
-            Pas de blabla, un devis
-          </a>
+  
+        <!-- Section droite - Logo, texte et boutons -->
+        <div class="space-y-6 animate-on-scroll lg:justify-self-end" style="animation-delay: 0.2s;">
+          <!-- Logo -->
+          <div class="mb-6">
+            <img 
+              src={logoFooter.src}
+              alt="NEWIC Logo"
+              class="h-16 lg:h-20 w-auto object-contain"
+            />
+          </div>
+  
+          <!-- Texte descriptif -->
+          <p class="text-white text-base lg:text-lg leading-relaxed font-montserrat">
+            NEWIC est une agence de conseil et de création qui accompagne les marques dans leurs enjeux de communication et de transformation.
+          </p>
+  
+          <!-- Boutons CTA -->
+          <div class="flex flex-col sm:flex-row gap-4 pt-4 items-stretch sm:items-center">
+            <a 
+              href="#agence"
+              class="w-full sm:w-auto px-4 py-4 sm:px-6 sm:py-3 rounded-lg font-medium text-white border transition-all hover:bg-white/10 bg-primary-dark border-primary-blue font-montserrat inline-block text-center" 
+              style="border-width: 1px; min-height: 48px;">
+              Découvrir l'agence
+            </a>
+            
+            <a 
+              href="#contact"
+              class="w-full sm:w-auto px-4 py-4 sm:px-6 sm:py-3 rounded-lg font-medium transition-all hover:opacity-90 bg-white text-primary-dark font-montserrat inline-block text-center"
+              style="min-height: 48px;">
+              Venez on en parle
+            </a>
+            
+            <a 
+              href="#devis"
+              class="w-full sm:w-auto px-4 py-4 sm:px-6 sm:py-3 rounded-lg font-medium text-white transition-all hover:opacity-90 bg-primary-blue font-montserrat inline-block text-center"
+              style="min-height: 48px;">
+              Pas de blabla, un devis
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<style>
-  section {
-    border-radius: 0 2rem 0 0;
-  }
-</style>
-
